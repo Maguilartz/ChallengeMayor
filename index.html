@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
+    <title>Encriptador Alura</title>
+</head>
+
+<body>
+    <header>
+        <h1><img src="Imagenes/Logo.svg" alt="Logo" id="logo"></h1>
+    </header>
+    
+    <main>
+        <section id="inicio">
+            <input type="text" id="cadena" placeholder="¿Qué palabra/frase decodificarás?"  onkeyup="this.value=this.value.toLowerCase();" oninput="desbloqueoDeBoton();">
+            <p id="indicacion">Ingresa el texto a codificar para comenzar. Solo funciona con letras minúsculas sin carácteres especiales.</p>
+        </section>
+        
+        <section class="area-encriptada">
+            
+            <div id="primera-fase-desencriptar">
+                <img src="Imagenes/Muñeco.svg" alt="esperando..." id="muñeco">
+                <p id="mensajeInicio">Nada que mostrar</p> <!--tiene que desaparecer-->
+                
+            </div>
+
+            <div id="segunda-fase-desencriptar">
+                <p id="sustitucion"></p>
+                <button onclick="copiar();" id="copiado" disabled>Copiar</button>
+            </div>
+
+            
+            
+        </section>
+        
+        <section class="botones-transformar">
+            <button onclick="encriptar();" container__boton id="encriptar" disabled>¡Listo! A encriptar</button>
+            <button onclick="desencriptar();" container__boton id="desencriptar" disabled>A desencriptar</button>
+            
+        </section>
+        
+    </main>
+    
+    <footer>
+        Challenge ONE elaborado por Margarita
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
